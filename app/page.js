@@ -116,6 +116,27 @@ export default function Home() {
           </div>
           <CategoryList />
         </div>
+
+        <div className="flex items-center lg:pt-[4rem] lg:pb-[4rem] flex-col lg:flex-row lg:justify-between">
+          <div className="flex flex-col gap-4">
+            <span>Contempary design</span>
+            <span className="text-[3rem]">
+              The spring <strong>summer</strong> <br />
+              cool 3d printed collection.
+            </span>
+            <Button>Shop Now</Button>
+          </div>
+          <div className="flex gap-[2rem] lg:justify-between">
+            <img
+              className="h-[300px]"
+              src="https://th.bing.com/th?id=OPA.TkLuZIeRLNw9Ww474C474&w=592&h=550&o=5&pid=21.1"
+            ></img>
+            <img
+              className="h-[300px] translate-y-[100px]"
+              src="https://th.bing.com/th?id=OPA.d%2bFkbl8zk31%2bJw474C474&w=592&h=550&o=5&pid=21.1"
+            ></img>
+          </div>
+        </div>
       </div>
     </main>
   );
