@@ -1,3 +1,4 @@
+import HeroModel from "@/components/hero/heroModel";
 import Image from "next/image";
 
 export default function Home() {
@@ -14,8 +15,8 @@ export default function Home() {
             models.
           </span>
         </div>
-        <div>
-          <img src="/hero.svg" alt="hero" />
+        <div className="h-[300px]">
+          <HeroModel />
         </div>
       </div>
     </main>
