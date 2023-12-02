@@ -3,8 +3,11 @@ import HeroModel from "@/components/hero/heroModel";
 import Product from "@/components/product";
 import product from "@/components/product";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import Link from "next/link";
+import { FaDiscord, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 export default function Home() {
   const products = [
@@ -58,8 +61,8 @@ export default function Home() {
     },
   ];
   return (
-    <main className="w-screen flex flex-col items-center mt-[4rem]">
-      <div className="w-[95%] max-w-[1440px]">
+    <main className="w-screen flex flex-col items-center pt-[4rem]">
+      <div className="w-[95%]  max-w-[1440px]">
         <div className="hero p-4  lg:h-[600px] lg:items-center flex flex-col lg:flex-row gap-8 w-full">
           <div className="flex lg:flex-1 lg:gap-4 flex-col gap-2">
             <span className="text-[2rem] lg:text-[6rem] font-bold lg:leading-[5.8rem]">
@@ -79,7 +82,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="h-[300px] lg:flex-1">
+          <div className="h-[400px] lg:flex-1">
             <HeroModel />
           </div>
         </div>
@@ -112,7 +115,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-4 mt-[2rem] mb-[2rem] lg:mb-[4rem] lg:mt-[4rem]">
           <div className="">
-            <span className="text-[2rem] font-bold">Choose Your Category</span>
+            <span className="text-[2rem] font-bold">Explore Categories</span>
           </div>
           <CategoryList />
         </div>
@@ -124,7 +127,9 @@ export default function Home() {
               The spring <strong>summer</strong> <br />
               cool 3d printed collection.
             </span>
-            <Button>Shop Now</Button>
+            <Button className="max-w-[300px] pt-[1rem] pb-[1rem] pl-[2rem]">
+              Shop Now
+            </Button>
           </div>
           <div className="flex gap-[2rem] lg:justify-between">
             <img
@@ -138,6 +143,39 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <footer className="w-full flex justify-center mt-[6rem] pb-[4rem] pt-[4rem]  bg-secondary">
+        <div className="flex w-full gap-[4rem] max-w-[1440px]">
+          <div className="flex w-full flex-col gap-4">
+            <span className="text-3xl font-bold">Stay in the loop</span>
+            <span>
+              Join our mailing list to stay in the loop with our newest feature
+              releases, NFT drops, and tips and tricks for navigating OpenSea.
+            </span>
+            <div className="flex gap-4 ">
+              <Input placeholder="Enter your email address" />{" "}
+              <Button>Join</Button>
+            </div>
+          </div>
+          <div className="w-full flex flex-col gap-4 ">
+            <span className="text-3xl font-bold">Join the community</span>
+            <div className="gap-4 flex">
+              <Button>
+                <FaTwitter />
+              </Button>
+              <Button>
+                <FaInstagram />
+              </Button>
+              <Button>
+                <FaDiscord />
+              </Button>
+              <Button>
+                <FaYoutube />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }

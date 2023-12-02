@@ -15,11 +15,12 @@ function HeroModel() {
       <PresentationControls
         speed={1.5}
         global
+        shadows={false}
         zoom={0.5}
         polar={[-0.1, Math.PI / 4]}
       >
         <Stage environment={"sunset"}>
-          <Model scale={1} />
+          <Model scale={2} />
         </Stage>
       </PresentationControls>
     </Canvas>
