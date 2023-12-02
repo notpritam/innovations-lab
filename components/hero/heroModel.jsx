@@ -4,7 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { useGLTF, Stage, PresentationControls } from "@react-three/drei";
 
 function Model(props) {
-  const { scene } = useGLTF("/models/bmw.glb");
+  const { scene } = useGLTF("/models/dog.glb");
   return <primitive object={scene} {...props} />;
 }
 
@@ -19,7 +19,7 @@ function HeroModel() {
         polar={[-0.1, Math.PI / 4]}
       >
         <Stage environment={"sunset"}>
-          <Model scale={0.2} />
+          <Model scale={1} />
         </Stage>
       </PresentationControls>
     </Canvas>
