@@ -10,8 +10,8 @@ function Model(props) {
 
 function HeroModel() {
   return (
-    <Canvas className="w-full h-full" dpr={[1, 2]} shadows camera={{ fov: 45 }}>
-      <color attach="background" args={["#171720"]} />
+    <Canvas className="w-full h-full" dpr={[1, 2]} camera={{ fov: 45 }}>
+      <color attach="background" args={["#020817"]} />
       <PresentationControls
         speed={1.5}
         global
@@ -19,7 +19,7 @@ function HeroModel() {
         polar={[-0.1, Math.PI / 4]}
       >
         <Stage environment={"sunset"}>
-          <Model scale={0.09} />
+          <Model scale={0.2} />
         </Stage>
       </PresentationControls>
     </Canvas>
